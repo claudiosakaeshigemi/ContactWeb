@@ -9,23 +9,25 @@ namespace ContactWeb
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
+                        "~/js/lib/jquery.min.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
-                        "~/Scripts/jquery.validate*"));
-
-            // Use a versão em desenvolvimento do Modernizr para desenvolver e aprender. Em seguida, quando estiver
-            // ready for production, use the build tool at https://modernizr.com to pick only the tests you need.
-            bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
-                        "~/Scripts/modernizr-*"));
+            bundles.Add(new ScriptBundle("~/bundles/datatables").Include(
+                        "~/js/lib/jquery.dataTables.min.js",
+                        "~/js/lib/dataTables.bootstrap.min.js",
+                        "~/js/lib/dataTables.colReorder.min.js"
+                        ));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js",
-                      "~/Scripts/respond.js"));
+                      "~/js/bootstrap.minjs"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/css/bootstrap.min.css",
+                      "~/css/jquery.dataTables.css",
+                      "~/css/jquery.dataTables.min.css",
+                      "~/css/jquery.dataTables_themeroller.css",
+                      "~/css/dataTables.bootstrap.min.css",
+                      "~/css/colReorder.bootstrap.min.css",
+                      "~/css/site.css"));
         }
     }
 }
