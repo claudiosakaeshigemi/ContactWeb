@@ -17,6 +17,7 @@ namespace ContactWeb
                         "~/js/lib/dataTables.colReorder.min.js"
                         ));
 
+
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/js/bootstrap.minjs"));
 
